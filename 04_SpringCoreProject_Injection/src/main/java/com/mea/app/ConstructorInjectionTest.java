@@ -8,7 +8,6 @@ import com.mea.beans.Student;
 import com.mea.beans.WishMessageGenerator;
 
 public class ConstructorInjectionTest {
-	private static final Object WishMessageGenerator = null;
 
 	public static void main(String[] args) {
 		
