@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!-- static factory method spring bean instantiation returning its own class object-->
+<bean id="c1" class="java.lang.Class" factory-method="forName" >  <!-- static -->
+  <constructor-arg value="java.util.Date" />
+</bean>
+
+<!-- static factory method spring bean instantiation returning relevant class object-->
+<bean id="cal" class="java.util.Calendar" factory-method="getInstance" />  <!-- static -->
+
+<!-- static factory method spring bean instantiation returning different class object-->
+<bean id="props" class="java.lang.System" factory-method="getProperties" /> <!-- static -->
+
+<!-- instance factory method spring bean instantiation returning same class object-->
+<bean id="s1" class="java.lang.String">
+  <constructor-arg value="hello" /> <!-- constructor injection -->
+</bean>
+<bean id="s2" factory-bean="s1" factory-method="concat"> <!-- instance -->
+  <constructor-arg value="12345" />  <!-- concat() method arg value -->
+</bean>
+
+
+<!-- instance factory method spring bean instantiation returning different class object-->
+<bean id="sb" class="java.lang.StringBuffer">
+  <constructor-arg value="how are you ?" /><!-- constructor injection -->
+</bean>
+
+<bean id="s3" factory-bean="sb" factory-method="substring">  <!-- instance -->
+  <constructor-arg value="0" />  <!-- for giving substring(-,-) method first arg value-->
+  <constructor-arg value="6" />  <!-- for giving substring(-,-) method second arg value-->
+</bean>
+
+</beans>
