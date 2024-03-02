@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- Configure Dependent Classes -->
+ 
+ <bean id="dtdc" class="com.mea.comps.DTDC" />
+ <bean id="blueDart" class="com.mea.comps.BlueDart" scope="prototype"/>
+
+ <!-- Configure Target Classes --> 
+ <!-- <bean id="flipkart" class="com.mea.comps.Flipkart" scope="singleton" lazy-init="true">  disable pre-instantiation
+   <property name="courier" ref="dtdc"></property>  setter injection
+ </bean> -->
+ 
+ <bean id="flipkart" class="com.mea.comps.Flipkart" scope="singleton">  <!-- disable pre-instantiation -->
+   <property name="courier" ref="blueDart"></property>  <!-- setter injection -->
+ </bean>
+ 
+  
+ 
+ 
+</beans>           
