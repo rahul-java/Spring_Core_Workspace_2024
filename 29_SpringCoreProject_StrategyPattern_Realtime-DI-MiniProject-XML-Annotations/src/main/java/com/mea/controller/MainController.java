@@ -1,6 +1,7 @@
 package com.mea.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import com.mea.dto.CustomerDTO;
@@ -8,6 +9,7 @@ import com.mea.service.ICustomerMgmtService;
 import com.mea.vo.CustomerVO;
 
 @Controller("controller")
+//@Component("controller")
 public final class MainController {
 
 	@Autowired

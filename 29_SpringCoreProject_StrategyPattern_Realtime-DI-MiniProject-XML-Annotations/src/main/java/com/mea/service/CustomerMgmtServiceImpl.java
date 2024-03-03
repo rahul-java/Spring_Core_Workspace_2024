@@ -2,6 +2,7 @@ package com.mea.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.mea.bo.CustomerBO;
@@ -9,6 +10,7 @@ import com.mea.dao.ICustomerDAO;
 import com.mea.dto.CustomerDTO;
 
 @Service("custService")
+//@Component("custService")
 public class CustomerMgmtServiceImpl implements ICustomerMgmtService {
 
 	@Autowired
