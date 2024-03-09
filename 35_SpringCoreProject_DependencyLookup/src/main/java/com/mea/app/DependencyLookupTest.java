@@ -24,3 +24,17 @@ public class DependencyLookupTest {
 		
 	}
 }
+
+/*
+ 
+ CricketBat.CricketBat() :: 0-param-constructor
+Cricketer.Cricketer() :: 0-param-constructor
+Cricketer.batting()
+CricketBat.CricketBat() :: 0-param-constructor
+Cricketer.Cricketer() :: 0-param-constructor
+Virat Kohli with 18 is batting and Scored 69 runs
+Virat Kohli with 18 is bowling.
+Virat Kohli with 18 is fielding.
+Virat Kohli with 18 is wicketKeeping.
+
+*/

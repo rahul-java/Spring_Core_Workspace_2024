@@ -29,6 +29,7 @@ public class Cricketer {
 
 	public void batting() {
 
+		System.out.println("Cricketer.batting()");
 		//create an extra IOC container
 		ClassPathXmlApplicationContext ctx=new ClassPathXmlApplicationContext("com/mea/cfgs/applicationContext.xml");
 		
