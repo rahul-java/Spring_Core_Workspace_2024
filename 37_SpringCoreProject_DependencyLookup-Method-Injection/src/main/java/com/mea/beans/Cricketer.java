@@ -58,7 +58,7 @@ public abstract class Cricketer {
 
 	
 	@Lookup
-	public abstract CricketBat getCricketBat();  //this method will be implemented in the subClass of target class
+	public abstract CricketBat getCricketBat();  //this method will be implemented in the Inmemory proxy class obj ref, subClass of target class
 	
 
 }

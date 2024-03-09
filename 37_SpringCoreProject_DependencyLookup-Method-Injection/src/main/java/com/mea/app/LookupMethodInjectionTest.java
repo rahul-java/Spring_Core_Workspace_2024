@@ -12,7 +12,7 @@ public class LookupMethodInjectionTest {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/mea/cfgs/applicationContext.xml");
 		
 		//get target class obj
-		Cricketer cricketer = ctx.getBean("cricketer",Cricketer.class); //Cricketer class is abstract class
+		Cricketer cricketer = ctx.getBean("cricketer",Cricketer.class); //Cricketer class is abstract class, so it gets InMemory proxy class object ref( which is subClass of target class)
 		
 		System.err.println(cricketer.getClass()+" :: "+cricketer.getClass().getSuperclass());
 		
