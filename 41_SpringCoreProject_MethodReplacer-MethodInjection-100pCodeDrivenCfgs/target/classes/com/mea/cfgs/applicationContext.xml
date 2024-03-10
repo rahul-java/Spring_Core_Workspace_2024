@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ciaReplacer" class="com.mea.replacer.CalcInterestAmountReplacer" />
+	
+	<bean id="bankService" class="com.mea.service.BankService">
+	<!-- if you want to execute Compound-interest then comment replaced-method tag or this will replace with Simple-interest method -->
+	  <replaced-method name="calcInterestAmount" replacer="ciaReplacer">
+	    <arg-type>double</arg-type>
+	    <arg-type>double</arg-type>
+	    <arg-type>double</arg-type>
+	  </replaced-method>
+	</bean>
+
+
+</beans>
